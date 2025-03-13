@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Bell } from 'lucide-react';
 import { toast } from 'sonner';
@@ -109,12 +108,9 @@ const NotificationButton = ({ className }: NotificationButtonProps) => {
   return (
     <button
       onClick={handleClick}
-      className={`${className} w-full max-w-[350px] py-3 rounded-full bg-notification-purple/20 text-white font-medium transition-all duration-300 hover:bg-notification-purple/30 active:scale-[0.98] relative overflow-hidden`}
+      className={`${className} w-[327px] h-[42px] rounded-lg border-2 border-notification-purple text-notification-purple font-medium transition-all duration-300 hover:bg-notification-purple/10 active:scale-[0.98] relative overflow-hidden`}
     >
-      <div className="relative z-10 flex items-center justify-center gap-2">
-        <Bell 
-          className={`h-6 w-6 ${isAnimating ? 'animate-bell-ring' : ''}`}
-        />
+      <div className="relative z-10 flex items-center justify-center" style={{ gap: '8px' }}>
         <span>Send Notification</span>
       </div>
       <div className="absolute inset-0 flex items-center justify-center">
